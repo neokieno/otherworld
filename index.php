@@ -4,8 +4,8 @@
 </div>
 <main>
 	<section class="logo-container">
-		<div class="mobile"><img src="images/head_keyart_sm.jpg" alt=""></div>
-		<div class="keyart"><img src="images/head_keyart_lg.jpg" alt=""></div>
+		<div class="mobile"><img src="/images/head_keyart_sm.jpg" alt=""></div>
+		<div class="keyart"><img src="/images/head_keyart_lg.jpg" alt=""></div>
 	</section>
 
 	<section id="tickets">
@@ -18,7 +18,7 @@
 			<div>
         		<h3>Groups 8+</h3>
 				<span>For group tickets, <a href="https://www.broadwayplus.com/shows/all-nighter" target="_blank">click here</a> <br class="tablet">or email <a href="mailto:groupsales@broadwayplus.com">groupsales@broadwayplus.com</a>.</span><br>
-				<a href="https://www.broadwayplus.com/shows/all-nighter" target="_blank"><img src="images/_icons/broadwayplus.png" alt="Broadway Plus" style="width:108px;margin-top:16px;"></a>
+				<a href="https://www.broadwayplus.com/shows/all-nighter" target="_blank"><img src="/images/_icons/broadwayplus.png" alt="Broadway Plus" style="width:108px;margin-top:16px;"></a>
 			</div>
 			<div>
 				<h3>
@@ -51,7 +51,7 @@
 					if ($member["role"] == "Understudy") break;
 				?>
 					<div class="cast-member" tabindex="0" data-index="<?=$i?>">
-				<?php if ($member["headshot_img"]) { ?><div class="cast-thumb"><img src="<?=$member["headshot_img"]?>" alt="<?=$member["name"]?>’s headshot"></div><?php } ?>
+				<?php if ($member["headshot_img"]) { ?><div class="cast-thumb"><img src="/<?=$member["headshot_img"]?>" alt="<?=$member["name"]?>’s headshot"></div><?php } ?>
 					<span class="cast-name"> <?=$member["name"]?></span>
 				</div>
 				<?php
@@ -63,7 +63,7 @@
 					if ($member["role"] == "Understudy") {
 					?>
 					<div class="cast-member" tabindex="0" data-index="<?=$i?>">
-						<?php if ($member["headshot_img"]) { ?><div class="cast-thumb"><img src="<?=$member["headshot_img"]?>" alt="<?=$member["name"]?>’s headshot"></div><?php } ?>
+						<?php if ($member["headshot_img"]) { ?><div class="cast-thumb"><img src="/<?=$member["headshot_img"]?>" alt="<?=$member["name"]?>’s headshot"></div><?php } ?>
 						<span class="cast-name"> <?=$member["name"]?></span>
 					</div>
 				<?php
@@ -74,7 +74,7 @@
 			<div class="cast-row tabcontent" id="tabpanel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2">
 				<?php $i = 0; foreach ($creative as $member) {?>
 					<div class="creative-member" tabindex="0" data-index="<?=$i?>">
-				<?php if ($member["headshot_img"]) { ?><div class="cast-thumb"><img src="<?=$member["headshot_img"]?>" alt="<?=$member["name"]?>’s headshot"></div><?php } ?>
+				<?php if ($member["headshot_img"]) { ?><div class="cast-thumb"><img src="/<?=$member["headshot_img"]?>" alt="<?=$member["name"]?>’s headshot"></div><?php } ?>
 				<span class="cast-role"> <?=$member["role"]?></span><br><span class="cast-name"> <?=$member["name"]?></span>
 				</div>
 				<?php

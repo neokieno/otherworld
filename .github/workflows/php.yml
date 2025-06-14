@@ -1,0 +1,29 @@
+name: Build and Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+
+      - name: Build static site
+        run: php build.php
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.9e84467974eb8b7e0a1e5bc9c4db2b3d15cbc }}
+          accountId: ${{ secrets.cffac65baebd67903b67147af69c3f24 }}
+          projectName: allnighter
+          directory: dist
+          branch: main

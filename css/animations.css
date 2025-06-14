@@ -1,0 +1,94 @@
+.pill.active::before {
+/* 	-webkit-animation: wobble-hor-bottom 2s ; */
+    animation: rotate-right 3s steps(2, jump-both);
+    animation-iteration-count: 5;
+}
+.pill.active::after {
+/* 	-webkit-animation: wobble-hor-bottom 2s ; */
+    animation: rotate-left 5s steps(2, jump-both);
+    animation-delay: .5s;
+    animation-iteration-count: 3;
+}
+.hand.active::before {
+/* 	-webkit-animation: wobble-hor-bottom 2s ; */
+        animation: in-right 3s steps(2, jump-both);
+        animation-iteration-count: 5;
+}
+.hand.active::after {
+/* 	-webkit-animation: wobble-hor-bottom 2s ; */
+    animation: in-left 3s steps(2, jump-both);
+    animation-iteration-count: 5;
+}
+.fade-up, .fade-up div {
+  opacity: 0;
+  transform: translateY(20px); /* Initial position, shifted 20px down */
+  transition: all 0.5s ease-in-out;
+  transition-delay: .15s;
+}
+.fade-up div:nth-child(1) {transition-delay: .15s;}
+.fade-up div:nth-child(2) {transition-delay: .25s;}
+.fade-up div:nth-child(3) {transition-delay: .35s;}
+.fade-up div:nth-child(4) {transition-delay: .45s;}
+.fade-up div:nth-child(5) {transition-delay: .55s;}
+
+.fade-up.active, .fade-up.active div {
+  opacity: 1;
+  transform: translateY(0); /* Final position, shifted up to 0px */
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fade 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes rotate-left {
+  0%,100% {
+    /* -webkit-transform: rotate(0deg); */
+            transform: rotate(120deg);
+            /* transform-origin: 50% 50%; */
+  }
+  50% {
+    /* -webkit-transform: rotate(-10deg); */
+            transform: rotate(60deg);
+  }
+}
+
+@keyframes rotate-right {
+    0%,100% {
+      /* -webkit-transform: rotate(0deg); */
+              transform: rotate(0deg);
+    }
+    50% {
+      /* -webkit-transform: rotate(-10deg); */
+              transform: rotate(55deg);
+    }
+  }
+
+  @keyframes in-left {
+    0%,100% {
+      /* -webkit-transform: rotate(0deg); */
+      /* transform-origin: scaleX(-1); */
+        transform: translateX(0px);
+              
+    }
+    50% {
+      /* -webkit-transform: rotate(-10deg); */
+      transform:translateX(30px);
+    }
+  }
+  
+  @keyframes in-right {
+      0%,100% {
+        /* -webkit-transform: rotate(0deg); */
+        transform:translateX(0px);
+      }
+      50% {
+        /* -webkit-transform: rotate(-10deg); */
+        transform:translateX(-30px);
+      }
+    }

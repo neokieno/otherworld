@@ -1,0 +1,179 @@
+/* RESET */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, button, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+  font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, main, section {
+	display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+section {
+	scroll-margin-top: 70px;
+}
+
+body {
+	min-height: -webkit-fill-available;
+}
+
+h1, h2, h3, h4, h5, h6, pre, code, address, caption, cite, code, em, strong, th {
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+fieldset, img {
+  border: none;
+}
+
+caption, th {
+  text-align: left; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul {
+  padding: 0px;
+  margin: 0px; }
+
+ul li {
+  display: inline;
+  margin: 0px;
+  padding: 0px;
+  float: left; }
+
+.clear {
+  clear: both; }
+
+/* Fonts */
+
+
+/* Variables */
+:root {
+  --white: #EBE9E1;
+  --dark: #030303;
+  --pink: #EB478D;
+  --gold: #BA7217;
+}
+.white {color: var(--white)}
+.dark {color: var(--dark)}
+.pink {color: var(--pink);}
+.gold {color: var(--gold);}
+
+/* Global */
+html, body {
+  background: var(--dark);
+  font-family: 'Agenda-Condensed', sans-serif;
+  color: var(--white);
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400;
+	line-height: 1.25;
+}
+@media (min-width: 768px) {
+  html, body {
+    font-size: 22px; }
+}
+
+b, strong,.bold {font-family: "Agenda-Condensed", sans-serif;font-weight: 700;}
+i, em {font-family: "Agenda-Condensed", sans-serif;font-style: italic;}
+b i, strong i, b em, strong em {font-family: "Agenda-Condensed", sans-serif;font-weight: 700;font-style: italic;}
+h1, h2, h3, h4, h5, h6 {
+  font-family:"Agenda", sans-serif;
+  font-weight: 700;
+  line-height: 1.14;
+	color: var(--white);
+	text-transform: uppercase;
+  text-align: center;
+}
+h1 {font-size: 2.7rem;}
+h2 {font-size: 32px;font-weight: 800;margin:auto;}
+h3 {font-size: 28px;line-height: 1;margin:auto;}
+h4 {font-size: 24px;line-height: 1;font-weight: 600;margin:auto;}
+
+a {color: var(--white);text-decoration: none;}
+button {cursor: pointer;}
+a:hover {color: var(--pink);text-decoration: underline;}
+p {
+  margin: 1em auto;
+}
+input[type="text"] {
+  font-size: 16px;
+} 
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+.upper {
+  text-transform: uppercase;
+}
+.text-left {
+	text-align: left;
+}
+.nowrap {white-space: nowrap;}
+.flex {
+	display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.vertical {
+	flex-direction: column;
+}
+.flex-break {
+  flex-basis: 100% !important;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+  height: auto;
+  width: auto;
+}
+svg {
+  height: .65em;
+}
+.mobile {
+	display: inline-block;
+}
+.tablet {
+	display: none;
+}
+@media (min-width: 768px) {
+  h2 {font-size: 49px;}
+  h4,h3 {font-size: min(39px, 3vw);line-height: 1.2;}
+	.mobile {
+		display: none;
+	}
+	.tablet {
+		display: inline-block;
+	}
+	.flex {
+		justify-content: space-between;
+	}
+}
+
+@media (max-width: 375px) {
+  h2 {font-size: 8vw;}
+}

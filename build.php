@@ -10,9 +10,9 @@ if (is_dir($outputDir)) {
 }
 mkdir($outputDir, 0755, true);
 
-// Discover all .php files in the root (excluding inc/, build.php, and this file)
+// Discover all .php files in the root (excluding inc/, build.php, and layout.php)
 $phpFiles = glob("$rootDir/*.php");
-$excluded = ['build.php', 'layout.php']; // Add any non-page files here
+$excluded = ['build.php', 'layout.php'];
 
 foreach ($phpFiles as $filePath) {
     $filename = basename($filePath);
@@ -38,6 +38,17 @@ foreach ($phpFiles as $filePath) {
 
     file_put_contents($outPath, $html);
     echo "✔ Built: $filename → $outPath\n";
+}
+
+// Copy static asset directories
+$assetDirs = ['css', 'js', 'images', 'assets']; // Add other folders as needed
+foreach ($assetDirs as $dir) {
+    $src = "$rootDir/$dir";
+    $dest = "$outputDir/$dir";
+    if (is_dir($src)) {
+        shell_exec("cp -r " . escapeshellarg($src) . ' ' . escapeshellarg($dest));
+        echo "✔ Copied: $dir → $dest\n";
+    }
 }
 
 echo "\n✅ Static site built in /dist\n";

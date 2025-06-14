@@ -1,6 +1,6 @@
 <?php require_once('inc/header.php'); ?>
 <div class="alert-bar">
-	<span>TICKETS ON SALE NOW! PERFORMANCES <br class="mobile">BEGIN FEBRUARY 25, 2025</span>
+	<span>TICKETS ON SALE! PERFORMANCES <br class="mobile">BEGIN FEBRUARY 25, 2025</span>
 </div>
 <main>
 	<section class="logo-container">

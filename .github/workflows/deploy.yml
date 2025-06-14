@@ -22,8 +22,8 @@ jobs:
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
-          apiToken: ${{ secrets.9e84467974eb8b7e0a1e5bc9c4db2b3d15cbc }}
-          accountId: ${{ secrets.cffac65baebd67903b67147af69c3f24 }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: allnighter
           directory: dist
           branch: main

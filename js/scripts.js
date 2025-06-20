@@ -57,14 +57,14 @@ async function loadJSON(url) {
     }
 }
   (async function() {
-    const fetchArray = await loadJSON('../inc/cast-array.json?v=1');
+    const fetchArray = await loadJSON('/inc/cast-array.json?v=1');
     $('.cast-member').on("click", function () {
       var i = Number($(this).data("index"));
       $.magnificPopup.open({
         key: 'cast-popup',
     		type: 'inline',
         items: fetchArray,
-    		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><img src="images/_icons/close.png" style="width:27px"></button><div class="bottom-fade"></div>',
+    		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><img src="/images/_icons/close.png" style="width:27px"></button><div class="bottom-fade"></div>',
         closeBtnInside: false,
     		fixedBgPos: true,
     		fixedContentPos: true,
@@ -89,14 +89,14 @@ async function loadJSON(url) {
 })();
 
 (async function() {
-  const fetchArray = await loadJSON('../inc/creative-array.json');
+  const fetchArray = await loadJSON('/inc/creative-array.json');
   $('.creative-member').on("click", function () {
     var i = Number($(this).data("index"));
     $.magnificPopup.open({
       key: 'creative-popup',
       type: 'inline',
       items: fetchArray,
-      closeMarkup: '<button title="%title%" type="button" class="mfp-close"><img src="images/_icons/close.png" style="width:27px"></button><div class="bottom-fade"></div>',
+      closeMarkup: '<button title="%title%" type="button" class="mfp-close"><img src="/images/_icons/close.png" style="width:27px"></button><div class="bottom-fade"></div>',
       closeBtnInside: false,
       fixedBgPos: true,
       fixedContentPos: true,
@@ -124,14 +124,14 @@ $('.mfp-wrap').append('<div class="bottom-fade"></div>');
   $('.popup-youtube').magnificPopup({type:'iframe'});
 	$('.popup-nav').magnificPopup({
 		type: 'inline',
-		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><img src="images/_icons/close.png" style="width:47px"></button>',
+		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><img src="/images/_icons/close.png" style="width:47px"></button>',
 		fixedBgPos: true,
 		fixedContentPos: true,
 		closeOnContentClick: true
 	})
 	$('.popup-modal').magnificPopup({
 		type: 'inline',
-		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><img src="images/_icons/close.png" style="width:47px"></button>',
+		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><img src="/images/_icons/close.png" style="width:47px"></button>',
 		fixedBgPos: true,
 		fixedContentPos: true
 	});
